@@ -3,70 +3,98 @@
 <head>
     <title>WCS Cybersecurity Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0b1120;
+            color: #e2e8f0;
         }
 
         header {
-            background: #111827;
-            padding: 20px;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 2px solid #00f2ff;
         }
 
         header h1 {
             color: #00f2ff;
-            margin: 0;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.8;
         }
 
         nav {
+            background: #111827;
             text-align: center;
-            background: #1f2937;
-            padding: 10px;
+            padding: 15px;
         }
 
         nav a {
             color: #00f2ff;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: auto;
-            padding: 30px;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        .blog-post {
+        .card {
             background: #1e293b;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
         }
 
-        .blog-post h2 {
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.3);
+        }
+
+        .card h2 {
             color: #00f2ff;
         }
 
-        .blog-post p {
+        .card p {
             line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .read-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #00f2ff;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
         footer {
             background: #111827;
             text-align: center;
             padding: 20px;
+            margin-top: 40px;
             border-top: 2px solid #00f2ff;
         }
 
         @media(max-width:768px){
-            .container{
-                padding:15px;
+            header h1 {
+                font-size: 26px;
             }
         }
     </style>
@@ -76,43 +104,49 @@
 
 <header>
     <h1>World Cyber Shield Blog</h1>
-    <p>Cyber Awareness • Fraud Prevention • Digital Security</p>
+    <p>Cyber Awareness • Fraud Protection • Digital Security News</p>
 </header>
 
 <nav>
     <a href="#">Home</a>
+    <a href="#">Articles</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
 </nav>
 
 <div class="container">
 
-    <div class="blog-post">
-        <h2>How to Identify a Scam Call</h2>
-        <p><strong>Date:</strong> March 2026</p>
+    <div class="card">
+        <h2>How to Identify Scam Calls in India</h2>
         <p>
-            Scam calls are increasing rapidly in India. Never share OTP,
-            bank details, or Aadhaar information with unknown callers.
-            Always verify official sources before taking action.
+            Fraudsters use fake bank alerts, OTP requests, and prize scams.
+            Learn how to detect red flags before sharing any personal details.
         </p>
+        <a href="#" class="read-btn">Read More</a>
     </div>
 
-    <div class="blog-post">
-        <h2>Top 5 Mobile Security Tips</h2>
-        <p><strong>Date:</strong> March 2026</p>
+    <div class="card">
+        <h2>Top 5 Mobile Security Tips for 2026</h2>
         <p>
-            1. Install apps only from Play Store.
-            2. Keep your phone updated.
-            3. Avoid clicking unknown links.
-            4. Use strong passwords.
-            5. Enable two-factor authentication.
+            Protect your smartphone from malware, phishing apps,
+            and spyware using these essential cybersecurity practices.
         </p>
+        <a href="#" class="read-btn">Read More</a>
+    </div>
+
+    <div class="card">
+        <h2>Why Two-Factor Authentication is Important</h2>
+        <p>
+            Even if hackers steal your password, 2FA can prevent
+            unauthorized access to your accounts.
+        </p>
+        <a href="#" class="read-btn">Read More</a>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 World Cyber Shield (WCS)</p>
+    <p>© 2026 World Cyber Shield (WCS) | Cybersecurity Awareness Initiative</p>
 </footer>
 
 </body>
