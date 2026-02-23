@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -15,12 +19,12 @@
 
         header {
             background: linear-gradient(90deg,#0f2027,#203a43,#2c5364);
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 45px;
+            font-size: 48px;
             color: #00f2ff;
             margin-bottom: 15px;
         }
@@ -31,10 +35,24 @@
             margin: auto;
         }
 
+        .hero-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 22px;
+            background: #00f2ff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
         nav {
             background: #111827;
             text-align: center;
             padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -54,9 +72,9 @@
             color: #00f2ff;
         }
 
-        /* Section animation */
+        /* Animation */
         .section {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s ease;
@@ -70,19 +88,19 @@
         .card {
             background: #1e293b;
             padding: 30px;
-            margin-top: 20px;
             border-radius: 10px;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
             gap: 30px;
+            margin-top: 30px;
         }
 
         .btn {
@@ -99,14 +117,17 @@
         footer {
             background: #0f172a;
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
             border-top: 1px solid #1e293b;
+        }
+
+        footer p {
+            margin: 5px 0;
         }
 
         .author-box {
             background: #111827;
             padding: 40px;
-            margin-top: 60px;
             border-top: 2px solid #00f2ff;
         }
     </style>
@@ -117,102 +138,100 @@
 <header>
     <h1>World Cyber Shield</h1>
     <p>
-        A Cybersecurity Awareness Initiative Dedicated to Protecting Individuals,
-        Students, and Businesses from Digital Threats and Online Fraud.
+        Protecting individuals and students from cyber threats,
+        digital fraud, and online scams through awareness and education.
     </p>
+    <a href="#about" class="hero-btn">Explore Articles</a>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
+    <a href="#about">About</a>
     <a href="#focus">Focus Areas</a>
+    <a href="#vision">Vision</a>
+    <a href="#author">Author</a>
 </nav>
 
 <div class="container">
 
-    <div class="section">
+    <div class="section" id="about">
         <h2>About World Cyber Shield</h2>
         <p>
-            World Cyber Shield (WCS) is a cybersecurity awareness platform created
-            to educate users about digital safety, fraud prevention, and cyber threats.
-            Cybercrime is rising rapidly in today’s digital era.
+            World Cyber Shield (WCS) is a cybersecurity awareness initiative
+            designed to educate individuals about digital safety,
+            fraud prevention, and responsible online behavior.
         </p>
-    </div>
-
-    <div class="section">
-        <h2>Why Cybersecurity Matters</h2>
-        <div class="card">
-            <ul>
-                <li>Increase in phishing scams</li>
-                <li>Online banking fraud</li>
-                <li>Identity theft risks</li>
-                <li>Social engineering attacks</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section id="focus">
-        <h2>Our Key Focus Areas</h2>
-       <div class="grid">
-        <div class="card">
-            <h3>Mobile Security</h3>
-            <p>
-                Learn how to secure smartphones, avoid malware,
-                and protect sensitive data from cyber threats.
-            </p>
-            <a href="mobile-security.html" class="btn">Read Article</a>
-        </div>
-
-        <div class="card">
-            <h3>Two-Factor Authentication</h3>
-            <p>
-                Understand why 2FA adds an essential extra layer of security
-                beyond passwords and prevents unauthorized access.
-            </p>
-            <a href="two-factor.html" class="btn">Read Article</a>
-        </div>
-
-        <div class="card">
-            <h3>Scam Call Awareness</h3>
-            <p>
-                Fraud calls and phishing attempts are increasing rapidly.
-                Learn how to identify suspicious calls and protect your money.
-            </p>
-            <a href="scam-calls.html" class="btn">Read Article</a>
-        </div>
-
-    </div>
-</div>
-
-    <div class="section">
-        <h2>Our Vision</h2>
-       <p>
-            Our long-term goal is to create a digitally secure community
-            where individuals are educated about cyber threats and
-            empowered to protect themselves.
-        </p>
-
         <p>
-            Through awareness articles, practical guides,
-            and educational content, World Cyber Shield
-            aims to contribute to a safer digital environment.
+            In 2026, cybercrime continues to grow rapidly.
+            From phishing scams and banking fraud to identity theft
+            and social engineering attacks, digital risks are everywhere.
+            WCS aims to provide simple, practical, and effective guidance
+            to help users stay secure.
         </p>
     </div>
 
-    <div class="section author-box">
+    <div class="section" id="focus">
+        <h2>Our Key Focus Areas</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Mobile Security</h3>
+                <p>
+                    Learn how to secure smartphones, avoid malware,
+                    and protect sensitive personal data.
+                </p>
+                <a href="mobile-security.html" class="btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Two-Factor Authentication</h3>
+                <p>
+                    Discover why enabling 2FA is essential
+                    for protecting online accounts.
+                </p>
+                <a href="two-factor.html" class="btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Scam Call Awareness</h3>
+                <p>
+                    Understand how to identify fraud calls
+                    and prevent financial loss.
+                </p>
+                <a href="scam-calls.html" class="btn">Read Article</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="vision">
+        <h2>Our Vision</h2>
+        <p>
+            Our goal is to build a digitally secure community
+            where individuals are aware, informed, and protected.
+        </p>
+        <p>
+            Through structured educational content and practical
+            cybersecurity guidance, WCS contributes toward
+            creating a safer digital environment.
+        </p>
+    </div>
+
+    <div class="section author-box" id="author">
         <h2>About the Author</h2>
         <p><strong>Raju Zevenor</strong></p>
         <p>
-          Founder of World Cyber Shield. Passionate about cybersecurity,
-            fraud prevention, and digital awareness.
-            Dedicated to educating students and online users about
-            protecting their data and privacy in the modern internet era.
+            Founder of World Cyber Shield. Passionate about cybersecurity,
+            fraud prevention, and spreading digital awareness among students
+            and online users.
         </p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 World Cyber Shield | Developed by Raju Zevenor</p>
+    <p>© 2026 World Cyber Shield</p>
+    <p>Developed by Raju Zevenor | Cybersecurity Awareness Initiative</p>
 </footer>
 
 <script>
