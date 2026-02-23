@@ -136,6 +136,46 @@
     border-radius: 10px;
     margin-top: 20px;
 }
+        .success-btn {
+    padding: 10px 20px;
+    background: #00f2ff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.success-message {
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.checkmark-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #00f2ff;
+    color: #000;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pop 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
     </style>
 </head>
 
@@ -254,6 +294,19 @@
         </iframe>
     </div>
 </div>
+    <div style="text-align:center; margin-top:20px;">
+    <button onclick="showSuccess()" class="success-btn">
+        I Have Submitted the Form
+    </button>
+</div>
+
+<div id="successMessage" class="success-message">
+    <div class="checkmark-circle">
+        ✓
+    </div>
+    <h3>Submission Successful!</h3>
+    <p>Thank you for contacting World Cyber Shield.</p>
+</div>
 <footer>
     <p>© 2026 World Cyber Shield</p>
     <p>Developed by Raju Zevenor | Cybersecurity Awareness Initiative</p>
@@ -273,6 +326,11 @@
     sections.forEach(section => {
         observer.observe(section);
     });
+</script>
+    <script>
+function showSuccess() {
+    document.getElementById("successMessage").style.display = "block";
+}
 </script>
 
 </body>
