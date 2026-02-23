@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>World Cyber Shield | Cybersecurity Blog</title>
+    <title>World Cyber Shield | Cybersecurity Awareness Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -10,32 +10,25 @@
             font-family: 'Segoe UI', sans-serif;
             background: #0b1120;
             color: #e2e8f0;
-
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        body.loaded {
-            opacity: 1;
-            transform: translateY(0);
+            line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-            padding: 60px 20px;
+            background: linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+            padding: 80px 20px;
             text-align: center;
         }
 
         header h1 {
+            font-size: 45px;
             color: #00f2ff;
-            font-size: 42px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         header p {
-            font-size: 18px;
-            opacity: 0.9;
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
         }
 
         nav {
@@ -48,84 +41,60 @@
             color: #00f2ff;
             margin: 0 20px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
-        .featured {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 0 20px rgba(0,242,255,0.1);
-        }
-
-        .featured h2 {
+        h2 {
             color: #00f2ff;
+            margin-top: 40px;
         }
 
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        .section {
+            margin-bottom: 60px;
         }
 
         .card {
             background: #1e293b;
+            padding: 30px;
+            margin-top: 20px;
             border-radius: 10px;
-            padding: 25px;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0,242,255,0.1);
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 25px rgba(0,242,255,0.3);
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 30px;
         }
 
-        .card h3 {
-            color: #00f2ff;
-        }
-
-        .read-btn {
+        .btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
+            padding: 10px 18px;
             background: #00f2ff;
             color: #000;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             border-radius: 5px;
-        }
-
-        .author {
-            text-align: center;
-            margin-top: 60px;
-            padding: 30px;
-            background: #111827;
-            border-top: 2px solid #00f2ff;
-        }
-
-        .author h3 {
-            color: #00f2ff;
+            margin-top: 15px;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
             background: #0f172a;
+            text-align: center;
+            padding: 30px;
             border-top: 1px solid #1e293b;
         }
 
-        @media(max-width:768px){
-            header h1 {
-                font-size: 30px;
-            }
+        .author-box {
+            background: #111827;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 2px solid #00f2ff;
         }
     </style>
 </head>
@@ -134,70 +103,133 @@
 
 <header>
     <h1>World Cyber Shield</h1>
-    <p>Cyber Awareness • Fraud Protection • Digital Security Insights</p>
+    <p>
+        A Cybersecurity Awareness Initiative Dedicated to Protecting Individuals,
+        Students, and Businesses from Digital Threats, Online Fraud,
+        and Cybercrime in the Modern Digital Era.
+    </p>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="#">Articles</a>
-    <a href="#">About</a>
+    <a href="mobile-security.html">Mobile Security</a>
+    <a href="two-factor.html">Two-Factor Authentication</a>
     <a href="#">Contact</a>
 </nav>
 
 <div class="container">
 
-    <div class="featured">
-        <h2>Featured Article: Protecting India from Digital Fraud</h2>
+    <div class="section">
+        <h2>About World Cyber Shield</h2>
         <p>
-            Cybercrime is rising rapidly across India. From phishing scams to
-            banking fraud, users must stay informed and alert.
-            Explore expert insights and practical security tips.
+            World Cyber Shield (WCS) is a cybersecurity awareness platform created
+            to educate users about digital safety, fraud prevention, and modern cyber threats.
+            In today’s connected world, cybercrime is increasing rapidly.
+            From phishing scams to identity theft, online fraud is affecting millions.
         </p>
-        <a href="scam-calls.html" class="read-btn">Read Featured Article</a>
+
+        <p>
+            Our mission is to spread digital awareness and provide practical security
+            knowledge that anyone can apply in daily life.
+            Cybersecurity is not only for IT professionals —
+            it is important for every smartphone user, student, and business owner.
+        </p>
     </div>
 
-    <div class="blog-grid">
+    <div class="section">
+        <h2>Why Cybersecurity Matters in 2026</h2>
 
         <div class="card">
-            <h3>How to Identify Scam Calls</h3>
-            <p>Learn the warning signs of fraud calls and how to protect your financial data.</p>
-            <a href="scam-calls.html" class="read-btn">Read More</a>
-        </div>
+            <p>
+                The digital economy is expanding. Online banking, UPI payments,
+                social media, cloud storage, and remote work have made life easier.
+                However, they have also increased cyber risks.
+            </p>
 
-        <div class="card">
-            <h3>Top 5 Mobile Security Tips</h3>
-            <p>Simple steps every smartphone user should follow in 2026.</p>
-            <a href="mobile-security.html" class="read-btn">Read More</a>
-        </div>
+            <ul>
+                <li>Increase in phishing and scam calls</li>
+                <li>Rise in mobile malware attacks</li>
+                <li>Data breaches from weak passwords</li>
+                <li>Social engineering fraud</li>
+            </ul>
 
-        <div class="card">
-            <h3>Why Two-Factor Authentication Matters</h3>
-            <p>Understand how 2FA protects your accounts from unauthorized access.</p>
-            <a href="two-factor.html" class="read-btn">Read More</a>
+            <p>
+                Awareness is the first step toward protection.
+                Prevention is always better than recovery.
+            </p>
         </div>
-
     </div>
 
-</div>
+    <div class="section">
+        <h2>Our Key Focus Areas</h2>
 
-<div class="author">
-    <h3>About the Author</h3>
-    <p><strong>Raju Zevenor</strong></p>
-    <p>
-        Founder of World Cyber Shield (WCS). Passionate about cybersecurity,
-        fraud prevention, and spreading digital awareness across India.
-    </p>
+        <div class="grid">
+
+            <div class="card">
+                <h3>Mobile Security</h3>
+                <p>
+                    Smartphones store banking apps, personal photos,
+                    OTP messages, and sensitive data.
+                    Learning how to secure your mobile device
+                    is essential in today’s world.
+                </p>
+                <a href="mobile-security.html" class="btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Two-Factor Authentication</h3>
+                <p>
+                    Passwords alone are not enough.
+                    2FA adds an extra layer of protection
+                    and prevents unauthorized access.
+                </p>
+                <a href="two-factor.html" class="btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Scam Awareness</h3>
+                <p>
+                    Fraud calls and phishing links are increasing.
+                    Learn how to identify suspicious messages
+                    and protect your financial information.
+                </p>
+                <a href="#" class="btn">Coming Soon</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Our Vision</h2>
+        <p>
+            Our long-term goal is to create a digitally secure community
+            where individuals are educated about cyber threats and
+            empowered to protect themselves.
+        </p>
+
+        <p>
+            Through awareness articles, practical guides,
+            and educational content, World Cyber Shield
+            aims to contribute to a safer digital environment.
+        </p>
+    </div>
+
+    <div class="author-box">
+        <h2>About the Author</h2>
+        <p><strong>Raju Zevenor</strong></p>
+        <p>
+            Founder of World Cyber Shield. Passionate about cybersecurity,
+            fraud prevention, and digital awareness.
+            Dedicated to educating students and online users about
+            protecting their data and privacy in the modern internet era.
+        </p>
+    </div>
+
 </div>
 
 <footer>
-    <p>© 2026 World Cyber Shield | Built by Raju Zevenor</p>
+    <p>© 2026 World Cyber Shield | Developed by Raju Zevenor</p>
 </footer>
-
-<script>
-window.addEventListener("load", function() {
-    document.body.classList.add("loaded");
-});
-</script>
 
 </body>
 </html>
