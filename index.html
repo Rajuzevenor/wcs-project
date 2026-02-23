@@ -323,10 +323,17 @@
     sections.forEach(section => {
         observer.observe(section);
     });
-</script>
-    <script>
+<script>
 function showSuccess() {
-    document.getElementById("successMessage").style.display = "block";
+    const msg = document.getElementById("successMessage");
+
+    // Show message
+    msg.style.display = "block";
+
+    // Hide after 4 seconds
+    setTimeout(() => {
+        msg.style.display = "none";
+    }, 4000);
 }
 </script>
 
